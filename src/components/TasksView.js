@@ -28,14 +28,27 @@ class TasksView extends React.Component {
           </li>);
     });
     return (
-      <div className="panel panel-default task-listing-view">
-          <div className="panel-body">
-              <h4>Tasks assigned to you<br/>
-                  <small>You have { _.size(tasks) } active tasks that can be selected for this date.</small></h4>
-              <ul className="list-group">
-                  { taskItems }
-              </ul>
+      <div className="panel panel-default">
+          <div className="panel-heading">
+              <h5 class="panel-title">{ _.size(tasks) } tasks assigned to you</h5>
           </div>
+          <div className="panel-body">
+              <div className="filters">
+                  <div className="form-group has-feedback">
+                      <input className="form-control" placeholder="Search"></input>
+                      <i className="glyphicon glyphicon-search form-control-feedback"></i>
+                  </div>
+                  <div className="dropdown pull-right">
+                      <button className="btn btn-default dropdown-toggle">
+                          Order <span className="caret"></span>
+                      </button>
+                      {/* Add bootstrap dropdown element here with the sorting options */}
+                  </div>
+              </div>
+          </div>
+          <ul className="list-group">
+              { taskItems }
+          </ul>
       </div>
     );
   }
