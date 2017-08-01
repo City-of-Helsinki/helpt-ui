@@ -7,7 +7,7 @@ export default {
       }
       return {
         url: `https://github.com/${task.workspace.origin_id}/issues/${task.origin_id}`,
-        text: `task.workspace.origin_id/{task.origin_id}`
+        text: `task.workspace.origin_id/${task.origin_id}`
       };
     }
   },
