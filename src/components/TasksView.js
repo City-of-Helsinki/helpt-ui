@@ -103,7 +103,7 @@ export const TaskItem = ({task, makeEntryFromTask}) => {
       <div className="task-listing-item-content">
         <div className="task-source">
           <a href={taskLink.url} tabIndex="-1">
-            <i className="fa fa-github-square task-source-icon" aria-hidden="true"></i>
+            <i className={ taskLink.icon } aria-hidden="true"></i>
             <span className="task-source-header">{ taskLink.text }</span>
           </a>
         </div>

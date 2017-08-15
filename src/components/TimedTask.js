@@ -3,15 +3,9 @@ import _ from 'lodash';
 
 import * as timeUtils from '../util/time';
 import * as dataUtils from '../util/data';
-import ExternalLinks from '../util/external-links';
+import ExternalLinks, {sourceSystemIcon} from '../util/external-links';
 
 const KEY_ENTER = 13;
-
-function sourceSystemIcon(source) {
-  //using this as default and placemarker for github
-  if (source == 'Trello') return 'fa fa-trello task-source-icon';
-  return 'fa fa-github-square task-source-icon';
-}
 
 function autoFocus(predicate) {
   return function (element) {
