@@ -15,7 +15,7 @@ module.exports = {
   devtool: 'eval',
   output: {
     path: path.join(__dirname, '/../dist/assets'),
-    filename: 'app.js',
+    filename: '[name].js',
     publicPath: defaultSettings.publicPath
   },
   postcss: () => {

@@ -11,7 +11,10 @@ let BowerWebpackPlugin = require('bower-webpack-plugin');
 const DotenvPlugin = require('webpack-dotenv-plugin');
 
 let config = Object.assign({}, baseConfig, {
-  entry: ['babel-polyfill', path.join(__dirname, '../src/index')],
+  entry: {
+    'app': ['babel-polyfill', path.join(__dirname, '../src/index')],
+    'silent_renew': [path.join(__dirname, '../src/silent_renew')]
+  },
   cache: false,
   devtool: 'sourcemap',
   plugins: [
