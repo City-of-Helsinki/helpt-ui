@@ -10,12 +10,17 @@ let BowerWebpackPlugin = require('bower-webpack-plugin');
 const DotenvPlugin = require('webpack-dotenv-plugin');
 
 let config = Object.assign({}, baseConfig, {
-  entry: [
-    'webpack-dev-server/client?http://127.0.0.1:' + defaultSettings.port,
-    'webpack/hot/only-dev-server',
-    'babel-polyfill',
-    './src/index'
-  ],
+  entry: {
+    'app': [
+      'webpack-dev-server/client?http://127.0.0.1:' + defaultSettings.port,
+      'webpack/hot/only-dev-server',
+      'babel-polyfill',
+      './src/index'
+    ],
+    'silent_renew': [
+      './src/silent_renew'
+    ]
+  },
   cache: true,
   devtool: 'eval-source-map',
   plugins: [
