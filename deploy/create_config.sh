@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cat << EOF > $WEB_ROOT/config.js
+window.CONFIG = {
+   "API_URL": '$API_URL',
+   "OPENID_CONNECT_CLIENT_ID":'$OPENID_CONNECT_CLIENT_ID',
+   "TEST_USER_UUID":'$TEST_USER_UUID'
+}
+EOF

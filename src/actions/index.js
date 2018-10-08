@@ -5,8 +5,8 @@ import URI from 'urijs';
 import * as timeUtils from '../util/time';
 import { findEntryForTask } from '../util/data';
 
-require('process');
-const API_BASE_URL = process.env.API_URL;
+// require('process');
+const API_BASE_URL = window.CONFIG.API_URL;
 
 function getEndPoint(resourceType, id) {
   let base = `${API_BASE_URL}/${resourceType}/`;

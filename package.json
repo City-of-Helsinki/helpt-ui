@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf dist/*",
     "copy": "copyfiles -f ./src/index.html ./src/silent_renew.html ./src/favicon.ico ./dist",
-    "dist": "npm run copy & webpack --env=dist",
+    "dist": "npm run copy && webpack --env=dist",
     "lint": "eslint ./src",
     "posttest": "npm run lint",
     "release:major": "npm version major && npm publish && git push --follow-tags",
@@ -18,7 +18,8 @@
     "mock-api": ". ./.env && sed -e \"s/\\\"callec\\\"/\\\"$TEST_USER_UUID\\\"/\" mock-api/db.json >mock-api/db-live.json; node mock-api/server.js",
     "test": "karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false",
-    "codecov": "cat coverage/*/lcov.info | codecov"
+    "codecov": "cat coverage/*/lcov.info | codecov",
+    "create_config": "node deploy/create_config.js"
   },
   "repository": "",
   "keywords": [],

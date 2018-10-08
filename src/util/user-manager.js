@@ -1,7 +1,6 @@
 import { createUserManager } from 'redux-oidc';
 
-require('process');
-const OPENID_CONNECT_CLIENT_ID = process.env.OPENID_CONNECT_CLIENT_ID;
+const OPENID_CONNECT_CLIENT_ID = window.CONFIG.OPENID_CONNECT_CLIENT_ID;
 
 const userManagerConfig = {
   client_id: OPENID_CONNECT_CLIENT_ID,
