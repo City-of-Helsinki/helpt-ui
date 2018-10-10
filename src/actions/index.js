@@ -7,6 +7,7 @@ import { findEntryForTask } from '../util/data';
 
 // require('process');
 const API_BASE_URL = window.CONFIG.API_URL;
+const OPENID_TOKEN_ENDPOINT = window.CONFIG.OPENID_TOKEN_ENDPOINT
 
 function getEndPoint(resourceType, id) {
   let base = `${API_BASE_URL}/${resourceType}/`;
@@ -133,10 +134,9 @@ export function createResource(resourceType, object, bailout = false) {
 }
 
 export function fetchApiToken(token) {
-  const endpoint = 'https://api.hel.fi/sso/api-tokens/';
   return {
     [CALL_API]: {
-      endpoint,
+      OPENID_TOKEN_ENDPOINT,
       method: 'GET',
       headers: { 'Authorization': `Bearer ${token}` },
       types: [
@@ -145,7 +145,7 @@ export function fetchApiToken(token) {
         'TOKEN_FAILURE'
       ],
       bailout: (state) => {
-        return shouldBailOut(state, endpoint);
+        return shouldBailOut(state, OPENID_TOKEN_ENDPOINT);
       }
     }
   };
