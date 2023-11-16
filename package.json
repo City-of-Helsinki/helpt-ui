@@ -92,7 +92,7 @@
     "redux": "^3.5.2",
     "redux-actions": "^2.0.3",
     "redux-api-middleware": "^1.0.2",
-    "redux-oidc": "^3.0.0-beta.7",
+    "redux-oidc": "^3.1.7",
     "sass-loader": "^4.0.0",
     "seamless-immutable": "^6.1.1",
     "urijs": "^1.18.1"
