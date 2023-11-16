@@ -4933,9 +4933,10 @@ redux-api-middleware@^1.0.2:
     isomorphic-fetch "^2.1.1"
     lodash.isplainobject "^3.2.0"
 
-redux-oidc@^3.0.0-beta.7:
-  version "3.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/redux-oidc/-/redux-oidc-3.0.0-beta.7.tgz#a703597cf6e060a55f6a91f26bbb0d3b18b86fc7"
+redux-oidc@^3.1.7:
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/redux-oidc/-/redux-oidc-3.1.7.tgz#04cc1476a813296b05abff794a35b255cb23b6c6"
+  integrity sha512-Xlo5UQf6MhGPf9it9iHv3pLjkP5NXqCFkmKXd6QE/xpoLfiTVwwQKs2bIVXZw4WroR09p54aLUzbMHw30Tte0g==
   optionalDependencies:
     immutable ">=3.6.0"
 
